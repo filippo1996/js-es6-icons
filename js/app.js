@@ -1,3 +1,9 @@
+/**
+ * Milestone 1 
+ * Partendo dalla seguente struttura dati , 
+ * mostriamo in pagina tutte le icone disponibili come da layout.
+ */
+
 const icons = [
     {
       name: 'cat',
@@ -96,3 +102,13 @@ const icons = [
       family: 'fas',
     },
   ];
+
+
+icons.forEach(ele => {
+    document.getElementById('show-icon').innerHTML += 
+    `<div class="col-2 p-35">
+        <div class="card">
+            <i class="${ele.family} ${ele.prefix}${ele.name}"></i><span class="name-icon">${ele.name}</span>
+        </div>
+    </div>`;
+});
